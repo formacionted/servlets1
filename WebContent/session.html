@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.hidden{
+display:none;
+}
+</style>
+</head>
+<body>
+
+<h3>Add attribute to session</h3>
+<form action="SessionServlet" method="POST">
+  Name:<br>
+  <input type="text" name="attributeName" placeholder="Attribute name">
+  <br><br>
+  Value:<br>
+   <input type="text" name="attributeValue" placeholder="Attribute value">
+  <br><br>
+  <input type="text" class="hidden" name="action" value="add">
+  <input type="submit" value="Add attribute">
+</form> 
+
+<h3>Invalidate session</h3>
+<form action="SessionServlet" method="POST">
+  <input type="text" class="hidden" name="action" value="delete">
+  <input type="submit" value="Remove session">
+</form> 
+
+</body>
+</html>
